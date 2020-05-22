@@ -10,7 +10,7 @@
 </head>
 
 <body>
-    <main class="formWrapper">
+    <main class="form-wrapper">
         <h1 lang="en" class="form-header">My own form</h1>
         <form class="form">
             <p>
@@ -34,6 +34,28 @@
                     <label class="form__label" for="cityName">Miasto:</label>
                     <input class="form__item" id="cityName" value="" placeholder="Wpisz nazwę miasta" type="text"
                         name="cityName">
+                </p>
+            </fieldset>
+            <fieldset class="form__fieldset">
+                <legend class="form__legend">Zainteresowania</legend>
+                <p class="form-radio-container">
+                    <label class="form__label form__label--radio-btn">
+                        <input class="form__item form__item--radio-btn" id="interests-1" value="" type="radio"
+                            value="graphics" name="interests">
+                        Grafika</label>
+                </p>
+                <p class="form-radio-container">
+                    <label class="form__label form__label--radio-btn">
+                        <input class="form__item form__item--radio-btn" id="interests-2" value="" type="radio"
+                            value="Informatics" name="interests">
+                        Informatyka</label>
+                </p>
+                <p class="form-radio-container">
+                    <label class="form__label form__label--radio-btn">
+                        <input class="form__item form__item--radio-btn" id="interests-3" value="" type="radio"
+                            value="music" name="interests">
+                        Muzyka
+                    </label>
                 </p>
             </fieldset>
         </form>

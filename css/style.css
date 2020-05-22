@@ -41,16 +41,17 @@ body::before {
     filter: saturate(2);
 }
 
-.formWrapper {}
+.form-wrapper {}
 
 .form-header {
     font-family: 'Playfair Display', serif;
     margin: 0;
     font-weight: 900;
     text-align: center;
-    color: aliceblue;
+    color: yellow;
     font-size: 90px;
     filter: drop-shadow(1px 1px rgb(102, 102, 102));
+
 
 }
 
@@ -73,8 +74,7 @@ body::before {
     display: block;
     width: 100%;
     padding-top: 5px;
-    /* background-color: transparent; */
-    /* border: 1px solid white; */
+    border: 1px solid white;
     padding: 30px 5px 10px 5px;
     font-weight: bold;
 }
@@ -86,12 +86,54 @@ body::before {
 }
 
 
-.form__fieldset {}
+.form__fieldset {
+    border: 2px solid rgba(255, 254, 254, 0.315);
+
+}
 
 .form__legend {
+    /* mix-blend-mode: overlay; */
     text-align: center;
-    background-color: #000;
-    color: #fff;
-    padding: 3px 16px;
+    font-family: 'Playfair Display', serif;
+    font-weight: 900;
+    letter-spacing: 2px;
+    font-size: 42px;
+    /* line-height: 2; */
+    background-color: transparent;
+    color: yellow;
+    padding: 3px 40px;
+
+}
+
+.form__label--radio-btn {
+    color: white;
+    position: unset;
+    font-family: 'Playfair Display', serif;
+    font-weight: 900;
+    letter-spacing: 2px;
+    font-size: 24px;
+    text-align: center;
+    line-height: 0;
+    padding: 10px;
+    transition: .3s linear;
+    transition-property: background-color, color;
+
+}
+
+.form__item--radio-btn {
+    width: unset;
+    display: initial;
+}
+
+.form-radio-container {
+    /* text-align: center; */
+    display: flex;
+    padding-left: 70px;
+
+}
+
+.form-radio-container:hover .form__label--radio-btn {
+    background-color: yellow;
+    color: black;
 
 }
