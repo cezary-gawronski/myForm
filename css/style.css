@@ -264,6 +264,23 @@ body {
     /* Add cool effects to your sliders! */
 }
 
+.form-submit-container {
+    text-align: center;
+}
+
 .form__submit {
-    margin: 0 auto;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+    background-color: yellow;
+    border: 1px solid black;
+    padding: 10px 25px;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: .2s linear;
+}
+
+.form__submit:hover {
+    background-color: black;
+    color: white;
+
 }
