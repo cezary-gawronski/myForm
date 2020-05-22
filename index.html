@@ -13,40 +13,48 @@
     <main class="form-wrapper">
         <h1 lang="en" class="form-header">My own form</h1>
         <form action="http://dev.cotenfrontend.pl" method="POST" class="form">
-            <p>
-                <label class="form__label" for="firstName">Imię:</label>
-                <input class="form__item" id="firstName" placeholder="Wpisz swoje imię" type="text" name="firstName"
-                    required>
-            </p>
-            <p>
-                <label class="form__label" for="lastName">Nazwisko:</label>
-                <input class="form__item" id="lastName" placeholder="Wpisz swoje nazwisko" type="text" name="lastName"
-                    required>
-            </p>
-            <p>
-                <label class="form__label" for="email">E-mail:</label>
-                <input class="form__item" id="email" placeholder="Wpisz swój e-mail" type="email" name="email" required>
-            </p>
-            <p>
-                <label class="form__label" for="phoneNumber">Telefon:</label>
-                <input class="form__item" id="phoneNumber" placeholder="Wpisz swój telefon" type="tel"
-                    name="phoneNumber" required>
-            </p>
-            <p>
-                <label class="form__label" for="password">Ustal hasło</label>
-                <input class="form__item" id="password" placeholder="Ustal silne hasło" type="password" name="password">
-            </p>
-            <p>
-                <label class="form__label" for="age">Ile masz lat?</label>
-                <select class="form__item" id="age" name="age" required>
-                    <option>Podaj swój przedział wiekowy</option>
-                    <option value="ageRange1">&lt;...18 </option>
-                    <option value="ageRange2">18&gt;...&lt;25</option>
-                    <option value="ageRange3">25&gt;...&lt;35</option>
-                    <option value="ageRange4">35&gt;...&lt;45</option>
-                    <option value="ageRange5">&gt;...50</option>
-                </select>
-            </p>
+            <div class="form-grid-wrapper">
+                <p class="form-container">
+                    <label class="form__label" for="firstName">Imię:</label>
+                    <input class="form__item" id="firstName" placeholder="Wpisz swoje imię" type="text" name="firstName"
+                        required>
+                </p>
+                <p>
+                    <label class="form__label" for="lastName">Nazwisko:</label>
+                    <input class="form__item" id="lastName" placeholder="Wpisz swoje nazwisko" type="text"
+                        name="lastName" required>
+                </p>
+                <p>
+                    <label class="form__label" for="email">E-mail:</label>
+                    <input class="form__item" id="email" placeholder="Wpisz swój e-mail" type="email" name="email"
+                        required>
+                </p>
+                <p>
+                    <label class="form__label" for="phoneNumber">Telefon:</label>
+                    <input class="form__item" id="phoneNumber" placeholder="Wpisz swój telefon" type="tel"
+                        name="phoneNumber" required>
+                </p>
+                <p>
+                    <label class="form__label" for="password">Ustal hasło</label>
+                    <input class="form__item" id="password" placeholder="Ustal silne hasło" type="password"
+                        name="password">
+                </p>
+                <p>
+                    <label class="form__label" for="age">Ile masz lat?</label>
+                    <select class="form__item" id="age" name="age">
+
+                        <option value="false" id="selectOption">
+                            Podaj swój przedział wiekowy
+                        </option>
+
+                        <option value="ageRange1">&lt;...18 </option>
+                        <option value="ageRange2">18&gt;...&lt;25</option>
+                        <option value="ageRange3">25&gt;...&lt;35</option>
+                        <option value="ageRange4">35&gt;...&lt;45</option>
+                        <option value="ageRange5">&gt;...50</option>
+                    </select>
+                </p>
+            </div>
             <fieldset class="form__fieldset">
                 <legend class="form__legend">Adres</legend>
                 <p>
@@ -113,7 +121,7 @@
                 <legend class="form__legend">Uwagi</legend>
                 <p>
                     <label class="form__label" for="suggestions">Napisz nam swoje sugestie</label>
-                    <textarea class="form__item form__item--textarea" id="suggestions" name="suggestions" cols=" 30"
+                    <textarea class="form__item form__item--textarea" id="suggestions" name="suggestions" cols="30"
                         rows="10"></textarea>
                 </p>
             </fieldset>

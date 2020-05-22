@@ -21,12 +21,30 @@ body {
     align-items: center;
     min-height: 100vh;
     font-family: Arial, Helvetica, sans-serif;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    display: block;
 
     background-image: radial-gradient(circle at 77% 26%, rgba(175, 175, 175, 0.06) 0%, rgba(175, 175, 175, 0.06) 4%, transparent 4%, transparent 100%), radial-gradient(circle at 37% 90%, rgba(129, 129, 129, 0.06) 0%, rgba(129, 129, 129, 0.06) 55%, transparent 55%, transparent 100%), radial-gradient(circle at 7% 92%, rgba(53, 53, 53, 0.06) 0%, rgba(53, 53, 53, 0.06) 39%, transparent 39%, transparent 100%), radial-gradient(circle at 65% 17%, rgba(128, 128, 128, 0.06) 0%, rgba(128, 128, 128, 0.06) 60%, transparent 60%, transparent 100%), radial-gradient(circle at 100% 39%, rgba(75, 75, 75, 0.06) 0%, rgba(75, 75, 75, 0.06) 20%, transparent 20%, transparent 100%), radial-gradient(circle at 92% 34%, rgba(205, 205, 205, 0.06) 0%, rgba(205, 205, 205, 0.06) 35%, transparent 35%, transparent 100%), radial-gradient(circle at 63% 90%, rgba(98, 98, 98, 0.06) 0%, rgba(98, 98, 98, 0.06) 62%, transparent 62%, transparent 100%), radial-gradient(circle at 93% 74%, rgba(130, 130, 130, 0.06) 0%, rgba(130, 130, 130, 0.06) 65%, transparent 65%, transparent 100%), linear-gradient(90deg, rgb(18, 233, 78), rgb(160, 239, 92));
 }
 
 .form-wrapper {
-    margin: 100px 0;
+    margin: 50px 0;
+}
+
+.form-grid-wrapper {
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 10px;
+    row-gap: 0px;
 }
 
 .form-header {
@@ -42,9 +60,9 @@ body {
 }
 
 .form {
+    max-width: 800px;
     position: relative;
     padding: 0 10px;
-
 }
 
 .form__label {
@@ -283,4 +301,51 @@ body {
     background-color: black;
     color: white;
 
+}
+
+
+
+@media (max-width: 550px) {
+    .form-grid-wrapper {
+        display: unset;
+        margin: 0 auto;
+    }
+
+    .form-wrapper {
+        margin: 10px 0;
+    }
+
+    .form {
+        /* max-width: 400px; */
+    }
+
+    .form-header {
+        font-size: 16vw;
+        padding: 0 20px;
+    }
+
+    .form-container {}
+
+
+    .form__legend {
+        font-size: 24px;
+    }
+
+    .form-radio-container {
+        padding: 0;
+    }
+
+    .form__label--radio-btn {
+        letter-spacing: unset;
+        font-size: 18px;
+    }
+
+    .form__item {
+        font-size: 16px;
+    }
+
+    .form__item::placeholder {
+        font-size: 12px;
+
+    }
 }
