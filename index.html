@@ -11,7 +11,7 @@
 
 <body>
     <main class="formWrapper">
-        <h1>Forms playground</h1>
+        <h1 lang="en" class="form-header">My own form</h1>
         <form class="form">
             <p>
                 <label class="form__label" for="firstName">Podaj swoje imię:</label>
@@ -23,6 +23,19 @@
                 <input class="form__item" id="lastName" value="" placeholder="Wpisz swoje nazwisko" type="text"
                     name="lastName">
             </p>
+            <fieldset class="form__fieldset">
+                <legend class="form__legend">Adres</legend>
+                <p>
+                    <label class="form__label" for="streetName">Ulica:</label>
+                    <input class="form__item" id="streetName" value="" placeholder="Wpisz nazwę ulicy" type="text"
+                        name="streetName">
+                </p>
+                <p>
+                    <label class="form__label" for="cityName">Miasto:</label>
+                    <input class="form__item" id="cityName" value="" placeholder="Wpisz nazwę miasta" type="text"
+                        name="cityName">
+                </p>
+            </fieldset>
         </form>
     </main>
 </body>

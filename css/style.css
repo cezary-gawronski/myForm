@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&display=swap');
+
+/* font-family: 'Playfair Display', serif; */
+
 html {
     box-sizing: border-box;
 }
@@ -15,18 +19,44 @@ body {
     align-items: center;
     min-height: 100vh;
     background: linear-gradient(217deg,
-            rgba(255, 0, 0, 0.8),
+            rgba(255, 0, 0),
             rgba(255, 0, 0, 0) 70.71%),
-        linear-gradient(127deg, rgba(102, 255, 0, 0.8), rgba(0, 255, 0, 0) 70.71%),
-        linear-gradient(336deg, rgba(0, 0, 255, 0.8), rgba(0, 0, 255, 0) 70.71%);
+        linear-gradient(127deg, rgba(102, 255, 0), rgba(0, 255, 0, 0) 70.71%),
+        linear-gradient(336deg, rgba(0, 0, 255), rgba(0, 0, 255, 0) 70.71%);
     font-family: Arial, Helvetica, sans-serif;
+}
 
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(217deg,
+            rgba(255, 0, 0),
+            rgba(255, 0, 0, 0) 70.71%),
+        linear-gradient(127deg, rgba(102, 255, 0), rgba(0, 255, 0, 0) 70.71%),
+        linear-gradient(336deg, rgba(0, 0, 255), rgba(0, 0, 255, 0) 70.71%);
+    filter: saturate(2);
 }
 
 .formWrapper {}
 
+.form-header {
+    font-family: 'Playfair Display', serif;
+    margin: 0;
+    font-weight: 900;
+    text-align: center;
+    color: aliceblue;
+    font-size: 90px;
+    filter: drop-shadow(1px 1px rgb(102, 102, 102));
+
+}
+
 .form {
     position: relative;
+    padding: 0 10px;
 
 }
 
@@ -53,4 +83,15 @@ body {
 .form__item::placeholder {
     font-size: 20px;
     color: lightgray;
+}
+
+
+.form__fieldset {}
+
+.form__legend {
+    text-align: center;
+    background-color: #000;
+    color: #fff;
+    padding: 3px 16px;
+
 }
