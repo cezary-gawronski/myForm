@@ -4,6 +4,7 @@
 
 html {
     box-sizing: border-box;
+    -moz-outline: red solid 10px;
 }
 
 *,
@@ -14,6 +15,17 @@ html {
 
 
 body {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+
+    background-image: radial-gradient(circle at 77% 26%, rgba(175, 175, 175, 0.06) 0%, rgba(175, 175, 175, 0.06) 4%, transparent 4%, transparent 100%), radial-gradient(circle at 37% 90%, rgba(129, 129, 129, 0.06) 0%, rgba(129, 129, 129, 0.06) 55%, transparent 55%, transparent 100%), radial-gradient(circle at 7% 92%, rgba(53, 53, 53, 0.06) 0%, rgba(53, 53, 53, 0.06) 39%, transparent 39%, transparent 100%), radial-gradient(circle at 65% 17%, rgba(128, 128, 128, 0.06) 0%, rgba(128, 128, 128, 0.06) 60%, transparent 60%, transparent 100%), radial-gradient(circle at 100% 39%, rgba(75, 75, 75, 0.06) 0%, rgba(75, 75, 75, 0.06) 20%, transparent 20%, transparent 100%), radial-gradient(circle at 92% 34%, rgba(205, 205, 205, 0.06) 0%, rgba(205, 205, 205, 0.06) 35%, transparent 35%, transparent 100%), radial-gradient(circle at 63% 90%, rgba(98, 98, 98, 0.06) 0%, rgba(98, 98, 98, 0.06) 62%, transparent 62%, transparent 100%), radial-gradient(circle at 93% 74%, rgba(130, 130, 130, 0.06) 0%, rgba(130, 130, 130, 0.06) 65%, transparent 65%, transparent 100%), linear-gradient(90deg, rgb(18, 233, 78), rgb(160, 239, 92));
+}
+
+/* body {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -24,9 +36,9 @@ body {
         linear-gradient(127deg, rgba(102, 255, 0), rgba(0, 255, 0, 0) 70.71%),
         linear-gradient(336deg, rgba(0, 0, 255), rgba(0, 0, 255, 0) 70.71%);
     font-family: Arial, Helvetica, sans-serif;
-}
+} */
 
-body::before {
+/* body::before {
     content: "";
     position: absolute;
     top: 0;
@@ -39,7 +51,7 @@ body::before {
         linear-gradient(127deg, rgba(102, 255, 0), rgba(0, 255, 0, 0) 70.71%),
         linear-gradient(336deg, rgba(0, 0, 255), rgba(0, 0, 255, 0) 70.71%);
     filter: saturate(2);
-}
+} */
 
 .form-wrapper {}
 
@@ -98,12 +110,14 @@ body::before {
     font-weight: 900;
     letter-spacing: 2px;
     font-size: 42px;
+    color: yellow;
     /* line-height: 2; */
     background-color: transparent;
-    color: yellow;
+    filter: drop-shadow(1px 1px rgb(102, 102, 102));
     padding: 3px 40px;
 
 }
+
 
 .form__label--radio-btn {
     color: white;
@@ -115,7 +129,7 @@ body::before {
     text-align: center;
     line-height: 0;
     padding: 10px;
-    transition: .3s linear;
+    transition: .3s, .6s, linear, linear;
     transition-property: background-color, color;
 
 }
@@ -126,8 +140,6 @@ body::before {
 }
 
 .form-radio-container {
-    /* text-align: center; */
-    display: flex;
     padding-left: 70px;
 
 }
@@ -136,4 +148,75 @@ body::before {
     background-color: yellow;
     color: black;
 
+}
+
+.form-radio-container input[type='radio'],
+.form-radio-container input[type='checkbox'] {
+    /* visibility: hidden; */
+    margin-right: 15px;
+}
+
+
+
+.form-radio-container input[type='radio']:after {
+    content: '';
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: 15px;
+    top: -10px;
+    left: -1px;
+    position: relative;
+    background-color: rgb(255, 255, 0);
+    visibility: visible;
+    border: 2px solid transparent;
+}
+
+.form-radio-container:hover input[type='radio']:after {
+    border: 2px solid black;
+}
+
+.form-radio-container input[type='radio']:checked:after {
+    content: '';
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: 15px;
+    top: -10px;
+    left: -1px;
+    position: relative;
+    background-color: yellow;
+    visibility: visible;
+    background-color: black;
+}
+
+
+.form-radio-container input[type='checkbox']:after {
+    content: '';
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    top: -10px;
+    left: -1px;
+    position: relative;
+    background-color: rgb(255, 255, 0);
+    visibility: visible;
+    border: 2px solid transparent;
+}
+
+.form-radio-container input[type='checkbox']:checked:after {
+    content: '';
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    top: -10px;
+    left: -1px;
+    position: relative;
+    visibility: visible;
+    border: 2px solid transparent;
+    background-color: black;
+}
+
+.form-radio-container:hover input[type='checkbox']:after {
+    border: 2px solid black;
 }
