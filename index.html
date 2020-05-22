@@ -14,25 +14,39 @@
         <h1 lang="en" class="form-header">My own form</h1>
         <form class="form">
             <p>
-                <label class="form__label" for="firstName">Podaj swoje imię:</label>
-                <input class="form__item" id="firstName" value="" placeholder="Wpisz swoje imię" type="text"
-                    name="firstName">
+                <label class="form__label" for="firstName">Imię:</label>
+                <input class="form__item" id="firstName" placeholder="Wpisz swoje imię" type="text" name="firstName"
+                    required>
             </p>
             <p>
-                <label class="form__label" for="lastName">Podaj swoje nazwisko:</label>
-                <input class="form__item" id="lastName" value="" placeholder="Wpisz swoje nazwisko" type="text"
-                    name="lastName">
+                <label class="form__label" for="lastName">Nazwisko:</label>
+                <input class="form__item" id="lastName" placeholder="Wpisz swoje nazwisko" type="text" name="lastName"
+                    required>
+            </p>
+            <p>
+                <label class="form__label" for="email">E-mail:</label>
+                <input class="form__item" id="email" placeholder="Wpisz swój e-mail" type="email" name="email" required>
+            </p>
+            <p>
+                <label class="form__label" for="phoneNumber">Telefon:</label>
+                <input class="form__item" id="phoneNumber" placeholder="Wpisz swój telefon" type="tel"
+                    name="phoneNumber" required>
+            </p>
+            <p>
+                <label class="form__label" for="password">Ustal hasło</label>
+                <input class="form__item" id="password" placeholder="Ustal silne hasło" type="password" name="password"
+                    required>
             </p>
             <fieldset class="form__fieldset">
                 <legend class="form__legend">Adres</legend>
                 <p>
                     <label class="form__label" for="streetName">Ulica:</label>
-                    <input class="form__item" id="streetName" value="" placeholder="Wpisz nazwę ulicy" type="text"
+                    <input class="form__item" id="streetName" placeholder="Wpisz nazwę ulicy" type="text"
                         name="streetName">
                 </p>
                 <p>
                     <label class="form__label" for="cityName">Miasto:</label>
-                    <input class="form__item" id="cityName" value="" placeholder="Wpisz nazwę miasta" type="text"
+                    <input class="form__item" id="cityName" placeholder="Wpisz nazwę miasta" type="text"
                         name="cityName">
                 </p>
             </fieldset>
@@ -40,20 +54,20 @@
                 <legend class="form__legend">Zainteresowania</legend>
                 <p class="form-radio-container">
                     <label class="form__label form__label--radio-btn">
-                        <input class="form__item form__item--radio-btn" id="interests-1" value="" type="radio"
-                            value="graphics" name="interests">
+                        <input class="form__item form__item--radio-btn" id="interests-1" type="radio" value="graphics"
+                            name="interests">
                         Grafika</label>
                 </p>
                 <p class="form-radio-container">
                     <label class="form__label form__label--radio-btn">
-                        <input class="form__item form__item--radio-btn" id="interests-2" value="" type="radio"
+                        <input class="form__item form__item--radio-btn" id="interests-2" type="radio"
                             value="Informatics" name="interests">
                         Informatyka</label>
                 </p>
                 <p class="form-radio-container">
                     <label class="form__label form__label--radio-btn">
-                        <input class="form__item form__item--radio-btn" id="interests-3" value="" type="radio"
-                            value="music" name="interests">
+                        <input class="form__item form__item--radio-btn" id="interests-3" type="radio" value="music"
+                            name="interests">
                         Muzyka
                     </label>
                 </p>
@@ -77,6 +91,17 @@
                         <input class="form__item form__item--radio-btn" id="agreement-3" value="agree3" type="checkbox"
                             value="music" name="agreement">
                         Zgoda na kontakt telefoniczny
+                    </label>
+                </p>
+            </fieldset>
+            <fieldset class="form__fieldset">
+                <legend class="form__legend">Uwagi</legend>
+            </fieldset>
+            <fieldset class="form__fieldset">
+                <legend class="form__legend">Twoje wrażenia</legend>
+                <p class="form-radio-container form-radio-container--form-range">
+                    <label>
+                        <input class="form__item form__item--range" type="range" min="0" max="100" step="20" id="range">
                     </label>
                 </p>
             </fieldset>
