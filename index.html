@@ -59,6 +59,11 @@
                     <input class="form__item" id="cityName" placeholder="Wpisz nazwę miasta" type="text"
                         name="cityName">
                 </p>
+                <p>
+                    <label class="form__label" for="postalCode">Kod pocztowy:</label>
+                    <input class="form__item" id="postalCode" placeholder="Wpisz kod pocztowy" name="postalCode"
+                        pattern="[0-9]{2}-[0-9]{3}" required>
+                </p>
             </fieldset>
             <fieldset class="form__fieldset">
                 <legend class="form__legend">Zainteresowania</legend>
