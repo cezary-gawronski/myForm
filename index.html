@@ -12,7 +12,7 @@
 <body>
     <main class="form-wrapper">
         <h1 lang="en" class="form-header">My own form</h1>
-        <form class="form">
+        <form action="http://dev.cotenfrontend.pl" method="POST" class="form">
             <p>
                 <label class="form__label" for="firstName">Imię:</label>
                 <input class="form__item" id="firstName" placeholder="Wpisz swoje imię" type="text" name="firstName"
@@ -34,8 +34,7 @@
             </p>
             <p>
                 <label class="form__label" for="password">Ustal hasło</label>
-                <input class="form__item" id="password" placeholder="Ustal silne hasło" type="password" name="password"
-                    required>
+                <input class="form__item" id="password" placeholder="Ustal silne hasło" type="password" name="password">
             </p>
             <p>
                 <label class="form__label" for="age">Ile masz lat?</label>
@@ -117,12 +116,13 @@
                 <legend class="form__legend">Twoje wrażenia</legend>
                 <p class="form-radio-container form-radio-container--form-range">
                     <label>
-                        <input class="form__item form__item--range" type="range" min="0" max="100" step="20" id="range">
+                        <input class="form__item form__item--range" id="range" name="range" type="range" min="0"
+                            max="100" step="20">
                     </label>
                 </p>
             </fieldset>
             <p class="form-submit-container">
-                <input class="form__submit" id="submit" type="submit" name="Wyślij">
+                <input class="form__submit" id="submit" type="submit" value="Wyślij">
             </p>
         </form>
     </main>
