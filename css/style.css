@@ -4,7 +4,8 @@
 
 html {
     box-sizing: border-box;
-    -moz-outline: red solid 10px;
+    -moz-outline: rgb(255, 0, 0) solid 10px;
+    outline: rgb(255, 0, 0);
 }
 
 *,
@@ -231,7 +232,7 @@ body::before {
 
 .form-radio-container--form-range input[type=range] {
     -webkit-appearance: none;
-    Hides the slider so that custom slider can be made
+    /* Hides the slider so that custom slider can be made */
     /* width: 100%; */
     /* Specific width is required for Firefox. */
     background: transparent;
@@ -240,11 +241,6 @@ body::before {
 
 .form-radio-container--form-range input[type=range]::-webkit-slider-thumb {
     -webkit-appearance: none;
-}
-
-.form-radio-container--form-range input[type=range]:focus {
-    outline: none;
-    /* Removes the blue border. You should probably do some kind of focus styling for accessibility reasons though. */
 }
 
 .form-radio-container--form-range input[type=range]::-ms-track {
@@ -315,17 +311,11 @@ body::before {
         margin: 10px 0;
     }
 
-    .form {
-        /* max-width: 400px; */
-    }
 
     .form-header {
         font-size: 16vw;
         padding: 0 20px;
     }
-
-    .form-container {}
-
 
     .form__legend {
         font-size: 24px;
@@ -347,5 +337,25 @@ body::before {
     .form__item::placeholder {
         font-size: 12px;
 
+    }
+
+    .form-radio-container input[type='checkbox']:after {
+        top: -5px;
+        left: -1px;
+    }
+
+    .form-radio-container input[type='checkbox']:checked:after {
+        top: -5px;
+        left: -1px;
+    }
+
+    .form-radio-container input[type='radio']:after {
+        top: -5px;
+        left: -1px;
+    }
+
+    .form-radio-container input[type='radio']:checked:after {
+        top: -5px;
+        left: -1px;
     }
 }
