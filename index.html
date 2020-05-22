@@ -37,6 +37,17 @@
                 <input class="form__item" id="password" placeholder="Ustal silne hasło" type="password" name="password"
                     required>
             </p>
+            <p>
+                <label class="form__label" for="age">Ile masz lat?</label>
+                <select class="form__item" id="age" name="age" required>
+                    <option>Podaj swój przedział wiekowy</option>
+                    <option value="ageRange1">&lt;...18 </option>
+                    <option value="ageRange2">18&gt;...&lt;25</option>
+                    <option value="ageRange3">25&gt;...&lt;35</option>
+                    <option value="ageRange4">35&gt;...&lt;45</option>
+                    <option value="ageRange5">&gt;...50</option>
+                </select>
+            </p>
             <fieldset class="form__fieldset">
                 <legend class="form__legend">Adres</legend>
                 <p>
@@ -96,6 +107,11 @@
             </fieldset>
             <fieldset class="form__fieldset">
                 <legend class="form__legend">Uwagi</legend>
+                <p>
+                    <label class="form__label" for="suggestions">Napisz nam swoje sugestie</label>
+                    <textarea class="form__item form__item--textarea" id="suggestions" name="suggestions" cols=" 30"
+                        rows="10"></textarea>
+                </p>
             </fieldset>
             <fieldset class="form__fieldset">
                 <legend class="form__legend">Twoje wrażenia</legend>
@@ -105,6 +121,9 @@
                     </label>
                 </p>
             </fieldset>
+            <p>
+                <input class="form__submit" id="submit" type="submit" name="Wyślij">
+            </p>
         </form>
     </main>
 </body>
