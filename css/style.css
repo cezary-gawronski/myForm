@@ -19,5 +19,38 @@ body {
             rgba(255, 0, 0, 0) 70.71%),
         linear-gradient(127deg, rgba(102, 255, 0, 0.8), rgba(0, 255, 0, 0) 70.71%),
         linear-gradient(336deg, rgba(0, 0, 255, 0.8), rgba(0, 0, 255, 0) 70.71%);
+    font-family: Arial, Helvetica, sans-serif;
 
+}
+
+.formWrapper {}
+
+.form {
+    position: relative;
+
+}
+
+.form__label {
+    display: inline-block;
+    position: absolute;
+    padding: 6px 0 0 6px;
+    font-weight: bold;
+    font-size: 14px;
+    color: gray;
+}
+
+.form__item {
+    display: block;
+    width: 100%;
+    padding-top: 5px;
+    /* background-color: transparent; */
+    /* border: 1px solid white; */
+    padding: 30px 5px 10px 5px;
+    font-weight: bold;
+}
+
+
+.form__item::placeholder {
+    font-size: 20px;
+    color: lightgray;
 }

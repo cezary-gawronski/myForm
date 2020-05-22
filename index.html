@@ -10,16 +10,18 @@
 </head>
 
 <body>
-    <main>
+    <main class="formWrapper">
         <h1>Forms playground</h1>
-        <form>
+        <form class="form">
             <p>
-                <label for="firstName">Podaj swoje imię:</label>
-                <input id="firstName" type="text" name="firstName">
+                <label class="form__label" for="firstName">Podaj swoje imię:</label>
+                <input class="form__item" id="firstName" value="" placeholder="Wpisz swoje imię" type="text"
+                    name="firstName">
             </p>
             <p>
-                <label for="lastName">Podaj swoje nazwisko:</label>
-                <input id="lastName" type="text" name="lastName">
+                <label class="form__label" for="lastName">Podaj swoje nazwisko:</label>
+                <input class="form__item" id="lastName" value="" placeholder="Wpisz swoje nazwisko" type="text"
+                    name="lastName">
             </p>
         </form>
     </main>
